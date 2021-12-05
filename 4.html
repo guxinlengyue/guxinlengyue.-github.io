@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<!-- saved from url=(0123)https://door.v.zzu.edu.cn/qj/jk_qj/qj_editIndex?ptopid=s855CE10AC2B04DDEBF18488B8DEF8F17&ruid=051654512332235&lsNo=10186761 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+    <meta name="viewport" content="width=device-width">
+    <title>健康平台学生请假系统</title>
+
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link href="./4_files/ax.css" rel="stylesheet">
+    <script src="./4_files/jquery-3.0.0.min.js.下载"></script>
+    <script src="./4_files/ax.min.js.下载"></script>
+    <link href="./4_files/layui.style.css" rel="stylesheet">
+    <link href="./4_files/layui.css" rel="stylesheet">
+    <script src="./4_files/commonJS.js.下载"></script>
+    <script src="./4_files/respond.min.js.下载"></script>
+    <script src="./4_files/framework-ui.js.下载"></script>
+    
+    <script src="./4_files/zepto.min.js.下载"></script>
+    <link href="./4_files/weui.min.css" rel="stylesheet">
+    <script src="./4_files/jweixin-1.0.0.js.下载"></script>
+
+
+<link id="layuicss-layer" rel="stylesheet" href="./4_files/layer.css" media="all"></head>
+<body ontouchstart="" onmouseover="" data-new-gr-c-s-check-loaded="14.1041.0" data-gr-ext-installed="">
+    <div class="layui-header header header-index">
+        <div class="layui-container">
+            <a class="layui-logo" href="https://jksb.v.zzu.edu.cn/">
+                <img src="./4_files/logo.png">
+            </a>
+        </div>
+    </div>
+
+    <div class="layui-layout-body">
+        <div class="layui-container">
+            
+<div style="padding-bottom:15px">
+
+    <div class="layui-form" style="border-bottom:1px solid #ddd ;padding:10px;">
+        <div style="float:left;">
+                <a href="https://door.v.zzu.edu.cn/qj/?ptopid=s855CE10AC2B04DDEBF18488B8DEF8F17&amp;ruid=163869585179101" class="layui-icon layui-icon-prev" style="font-size:22px;color:#333;"></a>
+        </div>
+        <div style="font-size:18px;text-align:center">请假条详情</div>
+    </div>
+</div>
+<form class="layui-form" action="https://door.v.zzu.edu.cn/qj/jk_qj/qj_editIndex?ptopid=s855CE10AC2B04DDEBF18488B8DEF8F17&amp;ruid=051654512332235&amp;lsNo=10186761" id="jtform">
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label">账号</label>
+            <div class="layui-input-block">
+                <input type="text" name="stuNo" lay-verify="title" value="201941020101" placeholder="请输入标题" class="layui-input">
+                <input type="hidden" name="lsNo" lay-verify="title" value="10186761" placeholder="请输入标题" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">姓名</label>
+            <div class="layui-input-block">
+                <input type="text" disabled="" name="stuName" lay-verify="required" value="陈恒毅" class="layui-input">
+                <input type="hidden" disabled="" id="lsNo" value="10186761" class="layui-input">
+
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label">联系方式</label>
+            <div class="layui-input-block">
+                <input type="text" name="stuMobile" lay-verify="title" value="13703703150" placeholder="请输入手机号" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">所在校区</label>
+            <div class="layui-input-block">
+                    <input type="text" disabled="" name="stuName" lay-verify="required" value="主校区" class="layui-input">
+            </div>
+
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label">辅导员</label>
+            <div class="layui-input-block">
+                    <input type="text" disabled="" name="stuName" lay-verify="required" value="齐昱珲" class="layui-input">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label">请假类型</label>
+            <div class="layui-input-block">
+
+                <input type="radio" name="qjClass" id="qjClass" value="事假" title="事假"><div class="layui-unselect layui-form-radio"><i class="layui-anim layui-icon"></i><div>事假</div></div>
+                <input type="radio" name="qjClass" id="qjClass" value="病假" title="病假" checked="checked"><div class="layui-unselect layui-form-radio layui-form-radioed"><i class="layui-anim layui-icon"></i><div>病假</div></div>
+            </div>
+        </div>
+        <div class="layui-inline">
+            <div class="layui-input-block">
+                <input type="button" id="btnupInfo" class="layui-btn  layui-btn-normal" title="上传附件" value="上传附件" onclick="uploadUrl()" style="display: none;">
+                <input type="button" id="btnShowInfo" class="layui-btn  layui-btn-normal" title="查看附件" value="查看附件" onclick="showUrl()">
+
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            
+            
+        <div class="layui-inline" id="endDate">
+                <label class="layui-form-label ">开始日期</label>
+                <div class="layui-input-block">
+                    <input type="text" name="shTime" disabled="" value="2021/12/3" class="layui-input">
+                </div>
+            </div></div>
+        <div class="layui-inline">
+            
+            
+        <div class="layui-inline" id="endDate">
+                <label class="layui-form-label ">结束日期</label>
+                <div class="layui-input-block">
+                    <input type="text" name="shTime" disabled="" value="2021/12/3" class="layui-input">
+                </div>
+            </div></div>
+    </div>
+    <div class="layui-form-item" id="jiaotong">
+        <label class="layui-form-label">出行方式</label>
+        <div class="layui-input-block">
+                <input type="text" disabled="" name="stuName" lay-verify="required" value="其他" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item" id="address">
+        <label class="layui-form-label">外出地址</label>
+
+        <div class="layui-input-inline" style="margin-left:14px ">
+            <input type="text" name="stuSheng" id="stuSheng" value="河南省" class="layui-input">
+        </div>
+        <div class="layui-form-mid layui-word-aux">省</div>
+        <div class="layui-input-inline">
+            <input type="text" name="stuShi" id="stuShi" value="郑州市" class="layui-input">
+        </div>
+        <div class="layui-form-mid layui-word-aux">市</div>
+
+        <div class="layui-input-inline">
+            <input type="text" name="stuXian" id="stuXian" value="高新区" class="layui-input">
+        </div>
+        <div class="layui-form-mid layui-word-aux">县/区</div>
+
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">请假事由</label>
+        <div class="layui-input-block">
+            <textarea class="layui-textarea" name="qjDesc" id="qjDesc">前往高新区医院就医</textarea>
+            
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <div class="layui-inline" id="endDate">
+            <label class="layui-form-label ">审核状态</label>
+            <div class="layui-input-block">
+                <input type="text" name="qjState" id="txt_qjState" disabled="" value="已批准" class="layui-input">
+                <input type="hidden" name="qjDay" disabled="" value="1" class="layui-input" checked="checked">
+            </div>
+        </div>
+            <div class="layui-inline" id="endDate">
+                <label class="layui-form-label ">审核时间</label>
+                <div class="layui-input-block">
+                    <input type="text" name="shTime" disabled="" value="2021/12/3 9:28:15" class="layui-input">
+                </div>
+            </div>
+    </div>
+
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+                            <button type="button" class="layui-btn  layui-btn-normal" id="xj">
+                    申请销假
+                </button>
+                    </div>
+    </div>
+</form>
+
+
+
+        </div>
+    </div>
+ 
+    
+    <script src="./4_files/weui.min.js.下载"></script>
+    <script src="./4_files/layui.js.下载"></script>
+    <script>
+        $(function () {
+
+            getdy();
+            getJiaot();
+            getXiao();
+
+            var end = getNYR('2021/12/4 0:00:00');
+            var start = getNYR('2021/12/4 0:00:00');
+            $('#starttime').val(start);//开始时间
+            $('#endtime').val(end);//结束时间
+            $('#qjStime').val(start);//开始时间
+            $('#qjEtime').val(end);//结束时间
+            $("#xj").on('click', function () {
+                window.location.href = "/qj/jk_qj/qj_xjIndex?ptopid=s855CE10AC2B04DDEBF18488B8DEF8F17&lsNo=10186761&ruid=163869585179101";
+
+            });
+            $('#delQJ').on('click', function () {
+
+                $.ajax({
+                    type: "POST",
+                    url: "/qj/jk_qj/deleteQJ?ptopid=s855CE10AC2B04DDEBF18488B8DEF8F17",
+                    data: { lsNo: '10186761' },
+                    async: true,
+                    dataType: "json",
+                    success: function (res) {
+                        layer.msg(res.error_msg, { time: 1500 }, function () {
+                            location.href = '/qj/?ptopid=s855CE10AC2B04DDEBF18488B8DEF8F17&ruid=' + '163869585179101';
+                        });
+
+                    }
+                });
+            });
+            if ($('#txt_qjState').val() == "已批准" || $('#txt_qjState').val().indexOf("待")!=-1 || $('#txt_qjState').val().indexOf("驳回")!=-1) {
+                $("#btnupInfo").hide();
+            }
+            if ($('#txt_qjState').val().indexOf("销假")!=-1) {
+                $("#btnupInfo").hide();
+                $("#btnShowInfo").hide();
+            }
+
+        });
+        //附件上传
+        function isUpload() {
+            var upFlag;
+            $.ajax({
+                async: false,
+                url: "/qj/jk_qj/isUpload",
+                data: { stuNo: '201941020101', fileClass: "e" },
+                type: "post",
+                dataType: "json",
+                success: function (res) {
+                    if (res.code == 1)
+                        upFlag = true;
+                    if (res.code == 0)
+                        upFlag = false;
+                }
+            });
+            return upFlag;
+        }
+        //上传附件跳转链接
+        function uploadUrl() {
+            var time = new Date().getTime();
+            window.location.href = "http://xwssf1.v.zzu.edu.cn/vls6s/upfile2020c.exe/uploadok6?ptopid=" + 's855CE10AC2B04DDEBF18488B8DEF8F17' + "&sid=" + time + "&fun2=c&fun3=e&ruid=" + '163869585179101';
+        }
+
+        //展示附件链接
+        function showUrl() {
+            var time = new Date().getTime();
+            window.location.href = "https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/viewphoto?ptopid=" + 's855CE10AC2B04DDEBF18488B8DEF8F17' + "&sid=" + time + "&fun2=t&fun3=1&fun5=e&ruid=" + '163869585179101';
+        }
+        $('#qjStime').on('focus', function () {
+            var dt = new Date();
+            var mon = dt.getMonth() + 1;
+
+            var day = dt.getDate();
+            if (mon < 10) {
+                mon = '0' + mon;
+            }
+            if (day < 10) {
+                day = '0' + day;
+            }
+
+            var df = [dt.getFullYear(), mon, day];
+            weui.datePicker({
+                id: 'start',
+                start: dt.getFullYear(),
+                defaultValue: df,
+                end: dt.getFullYear() + 3,
+                onConfirm: function (result) {
+                    if (result[1] < 10) {
+                        result[1] = '0' + result[1];
+                    }
+                    if (result[2] < 10) {
+                        result[2] = '0' + result[2];
+                    }
+
+                    var s = result[0].label.replace("年", "-") + result[1] + "-" + result[2];
+                    $("#qjStime").val(s);
+
+                }, title: '开始日期'
+            });
+        });
+        //结束日期
+        $('#qjEtime').on('focus', function () {
+            var dt = new Date();
+            var mon = dt.getMonth() + 1;
+
+            var day = dt.getDate();
+            if (mon < 10) {
+                mon = '0' + mon;
+            }
+            if (day < 10) {
+                day = '0' + day;
+            }
+            var df = [dt.getFullYear(), mon, day];
+
+            weui.datePicker({
+                id: 'end',
+                start: dt.getFullYear(),
+                end: dt.getFullYear() + 3,
+                defaultValue: df,
+                onConfirm: function (result) {
+                    if (result[1] < 10) {
+                        result[1] = '0' + result[1];
+                    }
+                    if (result[2] < 10) {
+                        result[2] = '0' + result[2];
+                    }
+                    var s = result[0].label.replace("年", "-") + result[1] + "-" + result[2];
+                    $("#qjEtime").val(s);
+                },
+                title: '结束日期'
+            });
+        });
+
+        function getdy() {
+
+            $.ajax({
+                data: { ptopid: 's855CE10AC2B04DDEBF18488B8DEF8F17' },
+                url: "/qj/jk_qj/getdyInfo",
+                type: "post",
+                dataType: "json",
+                success: function (data) {
+                    if (data.length > 0) {
+                        var arry = new Array;
+                        for (var i = 0; i < data.length; i++) {
+                            var info = {
+                                "label": data[i].dyName,
+                                "value": data[i].dyNo
+                            }
+                            arry.push(info);
+                        }
+                        $("#userDY").on('click', function () {
+                            weui.picker(arry, {
+                                defaultValue: ['31297097'],
+                                onConfirm: function (resl) {
+                                    $("#dyNo").val(resl[0].value);
+                                    $("#userDY").val(resl[0].label);
+                                },
+                                title: '辅导员列表',
+                                id: 'fd'
+                            });
+                        });
+
+                    }
+                }
+            });
+        }
+        function getXiao() {
+            $.ajax({
+                url: "/qj/jk_qj/getXiaoqu",
+                type: "post",
+                dataType: "json",
+                success: function (data) {
+
+                    if (data.length > 0) {
+                        var arry = new Array;
+                        for (var i = 0; i < data.length; i++) {
+                            var info = {
+                                "label": data[i].Name,
+                                "value": data[i].No
+                            }
+                            arry.push(info);
+                        }
+                        $("#qjArea").on('click', function () {
+                            weui.picker(arry, {
+                                defaultValue: ['A'],
+                                onConfirm: function (resl) {
+                                    $("#qjArea").val(resl[0].label);
+                                    $("#xq").val(resl[0].value);
+                                },
+                                title: '所在校区',
+                                id: 'qjArea'
+                            });
+                        });
+
+                    }
+                }
+            });
+        }
+        function getJiaot() {
+            $.ajax({
+                url: "/qj/jk_qj/getJiaot",
+                type: "post",
+                dataType: "json",
+                success: function (data) {
+                    if (data.length > 0) {
+                        var arry = new Array;
+                        for (var i = 0; i < data.length; i++) {
+                            var info = {
+                                "label": data[i].Name,
+                                "value": data[i].No
+                            }
+                            arry.push(info);
+                        }
+                        $("#jiaot").on('click', function () {
+                            weui.picker(arry, {
+                                defaultValue: ['E'],
+                                onConfirm: function (resl) {
+                                    $("#jiaot").val(resl[0].label);
+                                    $("#jt").val(resl[0].value);
+                                },
+                                id: 'jiaot',
+                                title: '外出方式'
+                            });
+                        });
+
+                    }
+                }
+
+            });
+        }
+        layui.use('form', function () {
+            var form = layui.form;
+
+            $("input[name=qjClass][value=事假]").attr("checked", '病假' == "事假" ? true : false);
+            $("input[name=qjClass][value=病假]").attr("checked", '病假' == "病假" ? true : false);
+            $("input[name=qjDay][value=1]").attr("checked", '1' == "1" ? true : false);
+            $("input[name=qjDay][value=2]").attr("checked", '1' == "2" ? true : false);
+            $("input[name=qjDay][value=3]").attr("checked", '1' == "3" ? true : false);
+            form.render();
+            form.on('submit(formDemo)', function (data) {
+                var pss = JSON.stringify(data.field);
+                var pa = JSON.parse(pss);
+                var dy = $('#userDY').val();
+
+                var qjDesc = $('#qjDesc').val();
+
+                var date1 = $('#qjStime').val();
+                var date2 = $('#qjEtime').val();
+                var qjClass = $('#qjClass').val();
+                var jt = $('#jiaot').val();
+                var day = getsubDay(date1, date2) + 1;
+
+                if (dy == "" || $('#stuMobile').val() == "" || $('#qjArea').val() == "") {
+                    layer.msg('辅导员或联系方式或校区不能为空！', { time: 1500 });
+                    return false;
+                }
+
+                if (date1 == "" || date2 == "") {
+                    layer.msg('开始日期或结束日期不能为空！');
+                    return false;
+                }
+                if (date2 < date1) {
+                    layer.msg('结束日期必须大于开始日期！');
+                    return false;
+                }
+
+                if (day > 7) {
+                    layer.alert('请假7天以上（不含7天）者,需走线下纸质请假流程！');
+                    return false;
+                }
+  
+                if (qjDesc == "" || jt == "") {
+                    layer.msg('请假事由或出行方式不能为空！');
+                    return false;
+                }
+
+                data.field.qjStime = $('#qjStime').val();
+                data.field.qjEtime = $('#qjEtime').val();
+
+                $.submitForm({
+                    url: "/qj/jk_qj/qjUpdate?ptopid=s855CE10AC2B04DDEBF18488B8DEF8F17",
+                    param: { para: JSON.stringify(data.field) },
+
+                }, '/qj/?ptopid=s855CE10AC2B04DDEBF18488B8DEF8F17&ruid=' + '163869585179101');
+
+                return false;
+            });
+        });
+
+
+    </script>
+
+
+
+
+<div class="xl-chrome-ext-bar" id="xl_chrome_ext_{4DB361DE-01F7-4376-B494-639E489D19ED}" style="display: none;">
+      <div class="xl-chrome-ext-bar__logo"></div>
+
+      <a id="xl_chrome_ext_download" href="javascript:;" class="xl-chrome-ext-bar__option">下载视频</a>
+      <a id="xl_chrome_ext_close" href="javascript:;" class="xl-chrome-ext-bar__close"></a>
+    </div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
